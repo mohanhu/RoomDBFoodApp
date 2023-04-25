@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/db_nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.roomdbapp.ui.view.fragment.LoginFragment"
+        android:label="LoginFragment">
+        <action
+            android:id="@+id/action_loginFragment_to_listFragments3"
+            app:destination="@id/listFragments3"
+            app:popUpTo="@id/listFragments3"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragments3"
+        android:name="com.example.roomdbapp.ui.view.fragment.ListFragments"
+        android:label="ListFragments">
+        <action
+            android:id="@+id/action_listFragments3_to_addFragment2"
+            app:destination="@id/addFragment2"
+            app:popUpTo="@id/addFragment2"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_listFragments3_to_updateFragment2"
+            app:destination="@id/updateFragment2"
+            app:popUpTo="@id/updateFragment2"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_listFragments3_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_listFragments3_to_splashFragment"
+            app:destination="@id/splashFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/addFragment2"
+        android:name="com.example.roomdbapp.ui.view.fragment.AddFragment"
+        android:label="AddFragment">
+        <action
+            android:id="@+id/action_addFragment2_to_listFragments3"
+            app:destination="@id/listFragments3"
+            app:popUpTo="@id/listFragments3"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/updateFragment2"
+        android:name="com.example.roomdbapp.ui.view.fragment.UpdateFragment"
+        android:label="UpdateFragment">
+        <action
+            android:id="@+id/action_updateFragment2_to_listFragments3"
+            app:destination="@id/listFragments3"
+            app:popUpTo="@id/listFragments3"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.roomdbapp.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+</navigation>
